@@ -1,6 +1,6 @@
 const { ObjectId } = require('mongodb');
 
-const DBConnection = require('../dbconnection');
+const DBConnection = require('../db-connect');
 
 const DB_NAME = process.env.DB_NAME;
 
