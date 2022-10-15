@@ -243,7 +243,7 @@ module.exports = DBConnection.getClient().then((dbClient) => {
       );
 
       if (updateInfo.modifiedCount !== 1) {
-        throw new Error('No document found for update');
+        throw Error('No document found for update');
       }
 
       const updateDoc = await issueCollection.findOne({ _id: ObjectId(_id) });
@@ -290,7 +290,7 @@ module.exports = DBConnection.getClient().then((dbClient) => {
       });
 
       if (deleteInfo.deletedCount !== 1) {
-        throw new Error('No document found for deletion');
+        throw Error('No document found for deletion');
       }
 
       res.locals.deletedID = _id;
